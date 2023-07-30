@@ -10,7 +10,7 @@ addButton.hidden = true;
 textInput.addEventListener('keydown', (event) => {
 if (event.key === 'Enter' || event.key === 'Go'){
   if(!localStorage.getItem('to-do-data')){
-    let existingData = [{name: event.target.value, style: `${event.target.value},'to-do-one'`}];
+    let existingData = [{name: event.target.value, style: 'to-do-one'}];
     localStorage.setItem('to-do-data', JSON.stringify(existingData))
     console.log(JSON.parse(localStorage.getItem('to-do-data')))
     textInput.value =''
